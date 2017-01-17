@@ -115,11 +115,8 @@ class GitHubTableViewController: UITableViewController, UISearchResultsUpdating 
 
     }
     
-    //Refresh Table View: modify var -> let
     func refreshTableView(){
         
-     /*   If you’ve got a view controller with a few UITextField elements or some other type of user input, you’ll immediately notice that you must unwrap the textField.text optional to get to the text inside (if any!). isEmpty won’t do you any good here, without any input the text field will simply return nil.
-        So you have a few of these which you unwrap and eventually pass to a function that posts them to a server endpoint. We don’t want the server code to have to deal with nil values or mistakenly send invalid values to the server so we’ll unwrap those input values with guard first. */
         guard let userArrayUnwrapped = userArray
             else {return}
         guard let repoArrayUnwrapped = repoArray

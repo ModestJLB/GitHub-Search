@@ -12,22 +12,19 @@ import SwiftyJSON
 
 class RequestProvider{
     
-//static -> can’t be overridden by subclasses
     static let instance = RequestProvider()
     
-//weak -> weak reference is just a pointer to an object that doesn't protect the object from being deallocated by ARC.
     weak var userQueryRequest: DataRequest?
     weak var repoQueryRequest: DataRequest?
     
     let apiURL = "https://api.github.com/"
-    let headers = ["Authorization": "token 0dc6a32527a728afece8cf2c29401c5293f377a8"]
+    let headers = ["Authorization": "token 008bf1c438c759a8b98f5cd839bfc09efce8c9cd"]
     let searchUsers = "search/users?q="
     let searchSingleUser = "users/"
     let searchRepos = "search/repositories?q="
     let searchSingleRepo = "repos/"
     let stars = "/starred"
 
-// private -> This makes sure your singletons are truly unique and prevents outside objects from creating their own instances of your class through virtue of access control.
     private init(){
     }
     
